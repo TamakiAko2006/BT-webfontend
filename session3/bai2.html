@@ -6,19 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <label for="name">Họ và tên:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="Email">Email:</label><br>
-        <input type="Email" id="Email" name="Email"><br><br>
-        <label for="Số điện thoại">Số điện thoại:</label><br>
-        <input type="Số điện thoại" id="Số điện thoại" name="Số điện thoại"><br><br>
-        Giới tính: <br>
-        <input type="radio" id="Giới tính" name="Giới tính" value="Nam">
-        <label for="Giới tính">Nam</label>
-        <input type="radio" id="Giới tính" name="Giới tính" value="Nữ">
-        <label for="Giới tính">Nữ</label><br><br>
-        <input type="submit" value="Đăng ký">
-    </form>
+    <from action="https://api.gateway.com" method="POST">
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email"><br><br>
+        <label for="password">Mật khẩu:</label>
+        <input type="text" id="password" name="password"><br><br>
+        <input type="submit" value="Đăng nhập">
+    </from>
 </body>
 </html>
