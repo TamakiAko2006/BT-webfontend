@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+  background-color: rgb(239, 237, 237);
+}
+
+.content1{
+  text-align: center;
+ 
+}
+.content2{
+  text-align: center;
+  width: 1500px;
+}
+.content3{
+background-color: blue;
+color: aliceblue;
+}
+.content4{
+ background-color: silver;
+}
+.content5{
+background-color: green;
+width: 45px;
+height: 30px;
+}
+.content6{
+background-color: yellow;
+width: 65px;
+height: 30px;
+}
+.content7{
+background-color: red;
+width: 55px;
+height: 30px;
+}
+
+.white{
+  background-color: white;
+}

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    font-size: 30px;
+    color: silver;
+}
+.content1{
+    font-size: 30px;
+}

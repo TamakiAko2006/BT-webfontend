@@ -1,0 +1,52 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    color: red;
+}
+
+.title {
+    border-style:solid;
+    border-color: green;
+    text-align: center;
+}
+
+.bg2 {
+    background-color: rgb(197, 192, 192);
+}
+
+.table {
+    border-left:3px solid rgb(124, 236, 126);
+    background-color: white;
+}
+
+.text1 {
+    color: rgb(151, 17, 17);
+}
+
+.text2 {
+    color: red;
+}
+
+.text3 {
+    color: blue;
+}
+
+.text4 {
+    color: red;
+}
+
+.text5 {
+    color: blue;
+}
+
+.content{
+    border-radius: 8px;
+background-color: rgb(40, 212, 40);
+width: 150px;
+height: 50px;
+color: aliceblue;
+}

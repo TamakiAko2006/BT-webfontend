@@ -1,0 +1,19 @@
+.bg2 {
+    background-color: grey;
+}
+.table {
+    width: 100%;
+}
+.user2 {
+    background-color: rgb(255, 255, 255);
+}
+.top {
+    background-color: rgb(45, 122, 199);
+    color: white;
+}
+body {
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
