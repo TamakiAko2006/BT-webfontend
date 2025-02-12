@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    background-color: rgb(229, 227, 227);
+}
+
+.bg {
+    border-style:solid;
+    border-color: white;
+    background-color: rgb(255, 255, 255);
+    width: 13%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.register {
+    background-color: rgb(57, 130, 248);
+    width: 85%;
+    height: 100%;
+    color: white;
+}
