@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    position: relative;
+}
+.content1{
+    background-color: rgb(230, 217, 119);
+    border: 1px;
+    border-radius: 5px;
+    color: brown;
+}
+.content2{
+    opacity: 0.7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    .com{
+        font-weight: bold;
+    }
+.content3{
+    color: blueviolet;
+}
+.content4{
+ opacity: 0.8;
+ font-family: Georgia,
+}
+.content5{
+    position:absolute;
+   padding-left: 890px;
+}
+.content6{
+    opacity: 0.7;
+    font-weight: bold;
+}
+.content7{
+    opacity: 0.7;
+}
+.content8{
+    width: 100px;
+    border-radius: 100%;
+    position:absolute;
+    padding-left: 60px;
+}
+.content11{
+  width: 100px;
+  border-radius: 100%;
+}
+.content9{
+    position:absolute;
+    padding-left: 80%;
+}
+.content10{
+    font-weight: bold;
+}
+.content12{
+    width: 99%;
+}

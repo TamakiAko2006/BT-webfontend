@@ -1,0 +1,27 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    border: 1px solid;
+    position: relative;
+}
+.content1{
+    position:absolute;
+    right: 1px;
+}
+.content2{
+    background-color: rgb(178, 145, 209);
+    height: 45px;
+    line-height: 3;
+}
+
+
+.content3{
+   font-weight: bold;
+}
+.content4{
+   color: rgb(210, 56, 82);
+}
