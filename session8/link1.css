@@ -1,0 +1,76 @@
+.car h2 {
+    font-family: 'Gill Sans';
+    font-weight: 900;
+    color: rgb(23, 28, 32);
+    text-align: center;
+    font-size: 35px;
+}
+
+.people h2 {
+    font-family: 'Gill Sans';
+    font-weight: 900;
+    color: rgb(23, 28, 32);
+    text-align: center;
+    font-size: 35px;
+}
+
+.car img {
+    display: block;
+    margin: 0 auto;
+}
+
+.people img {
+    display: block;
+    margin: 0 auto;
+}
+
+.car {
+    text-align: left;
+    padding-left: 12px;
+    color: #ad9b9b;
+    font-size: 20px;
+    word-spacing: 5px;
+    padding-bottom: 22px;
+}
+
+.body {
+    width: 80%;
+}
+
+.people {
+    text-align: left;
+    padding-left: 12px;
+    color: #ad9b9b;
+    font-size: 20px;
+    word-spacing: 5px;
+    padding: 2px;
+    margin-bottom: 22px;
+}
+
+h4 {
+    text-align: center;
+    color: #a3a3a3;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(226, 226, 226, 0.719);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+td {
+    margin: 0 20 40px;
+    border: 5px solid rgba(243, 237, 237, 0.486);
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    box-shadow: inset 0 0 2px rgba(75, 73, 73, 0.712);
+}
+
+p {
+    letter-spacing: 2px;
+}

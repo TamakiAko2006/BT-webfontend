@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    border-bottom: 3px solid rgb(244, 132, 41);
+    width: 10%;
+    padding-bottom: 20px;
+}
+
+.content1 {
+    border-right: 3px solid rgb(183, 183, 182);
+}
+
+.content2 {
+   padding-left: 70px;
+}
+
+.content3 {
+    border-left: 3px solid rgb(183, 183, 182);
+    padding-left: 100px;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(249, 159, 64);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(249, 159, 64);
+}
+
+p {
+    width: 60%
+}
