@@ -1,0 +1,62 @@
+.container1{
+    background-color: black;
+    color: #fff;
+     text-align: center;
+}
+
+.container2{
+    background-color: silver;
+    text-align: center;
+}
+
+.container{
+    position: relative;
+}
+
+
+.button{
+    color: #fff;
+    background-color: black;
+    height: 30px;
+    border-radius: 2px;
+}
+.container3{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   text-align: center; 
+   height: 200px;
+   justify-self: center;
+}
+
+.container4{
+    background-color: silver;
+    text-align: center;
+}
+
+.content1{
+    background-color: silver;
+    width: 90px;
+    height: 70px;
+    opacity: 0.3;
+    line-height: 70px;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+.text{
+    margin: 10px;
+}
+
+.text1{
+   padding-right: 100px;
+}
+
+.text2{
+   padding-right: 10px;
+}

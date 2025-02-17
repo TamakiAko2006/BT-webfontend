@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.container{
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: rgba(240,240,240,255);
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    width: 70px;
+    height: 70px;
+    background-color: rgba(52,152,219,255);
+    text-align: center;
+    line-height: 72px;
+    color: white;
+}

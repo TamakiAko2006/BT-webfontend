@@ -1,0 +1,91 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.Big{
+    position: relative;
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+img{
+    position: relative;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    width: 600px;
+    padding: 10px;
+}
+
+.sign-up{
+    text-align: center;
+    background-color: rgba(128,0,0,255);
+    line-height: 90px;
+    color: white;
+}
+
+button{
+    color: rgba(128,0,0,255);
+    width: 80%;
+    height: 40px;
+}
+
+.text1{
+    position: absolute;
+    top: 500px;
+    width: 650px;
+    left: 60px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.text2{
+    color: white;
+    position: absolute;
+    top: 850px;
+    width: 350px;
+    left: 35px;
+    font-size: 20px;
+}
+
+.text3{
+    color: white;
+    position: absolute;
+    top: 900px;
+    width: 350px;
+    left: 550px;
+    font-size: 20px;
+}
+
+.text4{
+    color: white;
+    position: absolute;
+    top: 900px;
+    width: 350px;
+    left: 1050px;
+    font-size: 20px;
+}
+
+.text5{
+    color: white;
+    position: absolute;
+    top: 1200px;
+    width: 350px;
+    left: 35px;
+    font-size: 20px;
+}
+
+.text6{
+    color: white;
+    position: absolute;
+    top: 1180px;
+    width: 500px;
+    left: 1050px;
+    font-size: 20px;
+}
