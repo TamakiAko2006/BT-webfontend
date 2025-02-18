@@ -1,0 +1,39 @@
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.table{
+    background-color: rgba(249,250,252,255);
+    width: 700px;
+}
+
+.text{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.text2{
+    opacity: 0.5;
+}
+
+.text3{
+    opacity: 0.6;
+}
+
+button{
+    border-radius: 6px;
+    border-color: white;
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 1225px;
+}
+
+img{
+    position: relative;
+}

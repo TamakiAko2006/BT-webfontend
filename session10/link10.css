@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-image {
+    width: 50%;
+}
+
+.product-details {
+    width: 50%;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-style: italic;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+}
+
+.size {
+    margin-right: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.compare {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.category {
+    margin-top: 20px;
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tags ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tags li {
+    display: inline-block;
+    margin-right: 10px;
+}
