@@ -1,0 +1,69 @@
+body {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 40px 1fr 40px; 
+    gap: 10px;
+    width: 100%;
+    height: 80vb;
+}
+
+
+.header {
+    grid-column: span 4;
+    background-color: rgba(154,198,194,255);
+    color: white;
+
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: rgba(237,123,113,255);
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    background-color: rgba(247,179,66,255);
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer {
+    grid-column: span 4;
+    background-color: rgba(150,202,202,255);
+    color: white;
+    padding: 20px;
+}
+
+.box1 {
+    background-color: rgba(65,94,121,255);
+    color: white;
+    padding: 20px;
+}
+
+.box2 {
+    background-color: rgba(239,122,113,255);
+    color: white;
+    padding: 20px;
+}
+
+.box3 {
+    background-color: rgba(243,182,65,255);
+    color: white;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .table {
+      display: flex;
+      flex-direction: column;
+    }
+  }
