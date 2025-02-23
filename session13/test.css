@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* phân đầu */
+.head{
+    
+}
+.head hr{
+  width: 1440px;
+left: 1440px;
+angle: -180 deg;
+opacity: 0.3;
+border-width: 0.5px;
+
+}
+
+.head_top{
+    width: 1440px;
+    height: 48px;
+    background: #000000; 
+   text-align: center;
+  display: flex;
+  align-items: center;
+}
+.head_top_content{
+  color:#fff;
+ top: 20px;
+   padding-left: 450px;
+}
+.head_top_content  option{
+ background-color: #000000;
+}
+ 
+.head_top_content a{
+  color: #fff;  
+} 
+.item1{
+ margin-left: 200px;
+ 
+}
+.head .head_bottom a{
+    text-decoration: none;
+}
+.head .head_bottom .content{
+  margin-top: 30px;
+}
+.head .head_bottom .content .item1{
+   margin-right: 100px; 
+  font-family: Inter;
+font-weight: 700px;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 3%;
+}
+.head .head_bottom .content .item2{
+  font-family: Poppins;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-left: 100px;
+}
+.head .head_bottom .content .item3{
+position: absolute;
+margin-left: 300px;
+}
+.head .head_bottom .content .item3 .text{
+  width: 243px;
+  height: 25px;
+  border-radius: 6px;
+  padding-top: 7px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  border: none;
+  background-color: azure;
+}
+.head .head_bottom .content .item3 .icon{
+  position: relative;
+  right: 40px;
+  opacity: 0.5;
+  font-size: 19px;
+}
+
+/* phần thân  */
+.dear{
+
+}
+.dear .container{
+  display: flex;
+flex-direction: row;
+margin-left: 100px;
+gap: 100px;
+
+}
+.dear .container .content1 {
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #000000;
+}
+.dear .container .content1 .item{
+  background-color: #000000;
+  color: #fff;
+  padding-top: 40px;
+  padding-left: 70px;
+  width: 290px;
+  height: 288px;
+}
+.dear .container hr{
+ height: 300px;
+
+}
+
+.footer{
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 7, 7);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    height: 300px;
+}
+.footer .sub{
+    padding-bottom: 30px;
+}
+.footer .sub .E{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .sub nav{
+    font-family: Arial, sans-serif;
+    padding-top: 12px;
+}
+.footer .sub .arr{
+    background-color: rgba(250, 235, 215, 0);
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 70%;
+}
+.footer .sub .arr input{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 28px;
+    width: 120px;
+    background-color: #00000000;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.footer .sub .arr img{
+    height: 20px;
+    margin-right: 12px;
+}
+.footer .support .S{ 
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .support .address{
+    padding-top: 10px;
+}
+.footer .support .address span{
+    padding-top: 12px;
+}
+.footer .account .A{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .account .acc{
+    padding-top: 10px;
+}
+.footer .account .acc a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.footer .link .Q{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .link .quick{
+    padding-top: 10px;
+}
+.footer .link .quick a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.footer .download .D{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif
+}
+.footer .download .app{
+    padding-top: 12px;
+}
+.footer .download .app .link{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+.footer .download .app .link .icon img{
+    height: auto;
+    padding-top: 10px;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 7, 7);
+    color: #ffffff;
+    height: 30px;
+}
+hr{
+    border: 1px solid rgba(180, 49, 49, 0.24);
+}

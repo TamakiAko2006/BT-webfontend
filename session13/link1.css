@@ -1,0 +1,254 @@
+body{
+    margin: 0px;
+    font-family: arial;
+}
+
+.header{
+    text-align: center;
+    background-color: rgba(0,0,0,255);
+    padding-bottom: 10px;
+}
+
+.text1{
+    color: rgba(149,149,149,255);
+    margin-left: 300px;
+    font-family: "Poppins", serif;
+    line-height: 40px;
+}
+
+.text2{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.form-select{
+    margin-left: 250px;
+    background-color: rgba(0,0,0,255);
+    border-color: rgba(0,0,0,255);
+    color: white;
+}
+
+.content1{
+    border-bottom: 2px solid rgba(227,227,227,255);
+    padding: 40px;
+}
+
+.text3{
+    font-size: 30px;
+    margin-left: 390px;
+}
+
+.text4{
+    margin: 250px;
+}
+
+.box{
+    position: relative;
+    width: 250px;
+    height: 40px;
+}
+
+i{
+    position: absolute;
+    right: 350px;
+    top: 104px;
+}
+
+.img{
+    padding-top: 60px;
+}
+
+.box2{
+    padding-left: 300px;
+    font-size: 30px;
+}
+
+.text5{
+    font-size: 20px;
+}
+
+.form-contro2{
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid rgba(175,175,175,255);
+    width: 300px;
+    height: 100px;
+}
+
+button{
+    background-color: rgba(219,68,68,255);
+    color: white;
+    border-color: rgba(219,68,68,255);
+    border-radius: 3px;
+    width: 120px;
+    height: 60px;
+    margin-right: 60px;
+}
+
+.text6{
+    color: rgba(228,114,114,255);
+}
+
+.header .header-bottom .seach .icon {
+    height: 15px;
+    margin-left: 12px;
+}
+
+.body {
+    display: flex;
+    height: 781px;
+    width: 1200px;
+    gap: 100px;
+    align-items: center;
+}
+
+.body .sign-in {
+    width: 550px;
+    margin-left: 3%;
+}
+
+.body .sign-in .title {
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.body .sign-in .title span {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.body .sign-in .layout {
+    display: grid;
+    margin-top: 25px;
+}
+
+.body .sign-in .layout input {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 6px;
+}
+
+.body .sign-in .buttom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body .sign-in .buttom button{
+    height: 40px;
+    width: 143px;
+    border: none;
+    background-color: rgb(219, 68, 68);
+    border-radius: 3px;
+}
+.body .sign-in .buttom a{
+    text-decoration: none;
+    color: rgb(219, 68, 68);
+    margin-left: 20%;
+}
+.footer{
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 7, 7);
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    height: 300px;
+}
+.footer .sub{
+    padding-bottom: 30px;
+}
+.footer .sub .E{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .sub nav{
+    font-family: Arial, sans-serif;
+    padding-top: 12px;
+}
+.footer .sub .arr{
+    background-color: rgba(250, 235, 215, 0);
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 70%;
+}
+.footer .sub .arr input{
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 28px;
+    width: 120px;
+    background-color: #00000000;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.footer .sub .arr img{
+    height: 20px;
+    margin-right: 12px;
+}
+.footer .support .S{ 
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .support .address{
+    padding-top: 10px;
+}
+.footer .support .address span{
+    padding-top: 12px;
+}
+.footer .account .A{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .account .acc{
+    padding-top: 10px;
+}
+.footer .account .acc a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.footer .link .Q{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer .link .quick{
+    padding-top: 10px;
+}
+.footer .link .quick a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.footer .download .D{
+    font-size: x-large;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif
+}
+.footer .download .app{
+    padding-top: 12px;
+}
+.footer .download .app .link{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+.footer .download .app .link .icon img{
+    height: auto;
+    padding-top: 10px;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 7, 7);
+    color: #ffffff;
+    height: 30px;
+}
+hr{
+    border: 1px solid rgba(180, 49, 49, 0.24);
+}
