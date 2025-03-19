@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+       .dark-mode {
+            color: white;
+            background-color: black;
+       }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <h1>Chuyển Đổi Chế Độ Tối/Sáng</h1>
+        <p>Nhấn nút để chuyển đổi giữa chế độ tối và sáng.</p>
+        <button onclick="toggleMode()">Bật/Tắt chế độ tối</button>
+    </div>
+
+    <script>
+        function toggleMode(){
+            document.getElementById("background").classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <style>
+        .darkMode {
+            background-color: rgb(162, 163, 165);
+        }
+        .show {
+            display: block;
+        }
+        .box {
+            display: none;
+        }
+        .box1{
+            background-color: white;
+            width: 25%;
+            margin-left: 30%;
+        }
+        .button1{
+            background-color: white;
+            border: 1px white;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <h1>Modal Example</h1>
+        <button onclick="changeDisplay()">Open Modal</button>
+        <div id="background1" class="box" class="box1">
+            <span>Some Text in the Modal</span>
+            <span><button onclick="closeModal()" class="button1">x</button></span>
+        </div>
+    </div>
+
+    <script>
+        function changeDisplay() {
+            document.getElementById("background").classList.add("darkMode");
+            document.getElementById("background1").classList.add("show","box1");
+            document.getElementById("background1").classList.remove("box");
+        }
+
+        function closeModal() {
+            document.getElementById("background1").classList.add("box");
+            document.getElementById("background1").classList.remove("show");
+            document.getElementById("background").classList.remove("darkMode");
+        }
+    </script>
+</body>
+</html>

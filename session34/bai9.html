@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="link8.css">
+</head>
+<body>
+    <div class="header">
+        <h2>My To-Do List</h2>
+        <input type="text" id="myInput" placeholder="Enter a task...">
+        <span class="addBtn" onclick="addTask()">Add</span>
+    </div>
+    <ul id="myUL"></ul>
+
+    <script>
+        let todoList = [
+            { id: 1, task: 'Hit the gym', completed: false },
+            { id: 2, task: 'Pay bills', completed: true },
+            { id: 3, task: 'Meet George', completed: false },
+            { id: 4, task: 'Buy eggs', completed: false },
+            { id: 5, task: 'Read a book', completed: false },
+            { id: 6, task: 'Organize office', completed: false }
+        ];
+
+        function show() {
+            let listHTML = "";
+            for (let i = 0; i < todoList.length; i++) {
+                let className = todoList[i].completed ? "checked" : "";
+                listHTML += `
+                    <li class="${className}" onclick="toggleComplete(${i})">
+                        ${todoList[i].task} 
+                        <span class="close" onclick="removeTask(event, ${i})">×</span>
+                    </li>`;
+            }
+            document.getElementById("myUL").innerHTML = listHTML;
+        }
+
+        function addTask() {
+            let input = document.getElementById("myInput").value.trim();
+            if (input === "") {
+                alert("Vui lòng nhập công việc!");
+                return;
+            }
+            let newTask = { id: todoList.length + 1, task: input, completed: false };
+            todoList.push(newTask);
+            document.getElementById("myInput").value = "";
+            show();
+        }
+
+        function toggleComplete(index) {
+            todoList[index].completed = !todoList[index].completed;
+            show();
+        }
+
+        function removeTask(event, index) {
+            event.stopPropagation();
+            todoList.splice(index, 1);
+            show();
+        }
+
+        show();
+    </script>
+</body>
+</html>

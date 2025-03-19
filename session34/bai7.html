@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="link7.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h2 style="margin: 5px">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title..." />
+        <span class="addBtn">Add</span>
+      </div>
+  
+      <ul id="myUL">
+      </ul>
+</body>
+<script>
+    let todoList = [
+    {
+        id: 1,
+        task: 'Hit the gym',
+        completed: false,
+    },
+    {
+        id: 2,
+        task: 'Pay bills',
+        completed: true,
+    },
+    {
+        id: 3,
+        task: 'Meet george',
+        completed: false,
+    },
+    {
+        id: 4,
+        task: 'Buy eggs',
+        completed: false,
+    },
+    {
+        id: 5,
+        task: 'Read a book',
+        completed: false,
+    },
+    {
+        id: 6,
+        task: 'Organize office',
+        completed: false,
+    },
+];
+
+function show() {
+    let str = "";
+    for (let i = 0; i < todoList.length; i++) {
+        let checkmark = todoList[i].completed ? "✔" : "";
+        let className = todoList[i].completed ? "completed" : "";
+
+        str += `
+            <li class="${className}">
+                <span class="checkmark">${checkmark}</span>
+                ${todoList[i].task} <span class="close">×</span>
+            </li>
+        `;
+    }
+    document.getElementById("myUL").innerHTML = str;
+}
+
+show();
+</script>
+</html>

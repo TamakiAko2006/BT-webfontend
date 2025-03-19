@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .border1{
+        border: 3px solid black;
+        padding-left: 30px;
+    }
+</style>
+<body>
+    <div class="border1" id="login">
+        <label for="userName">username:</label> <br> <br>
+        <input type="text" id="username"> <br> <br>
+
+        <label for="password">password:</label> <br> <br>
+        <input type="text" id="password"> <br> <br>
+
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+<script>
+     function login() {
+        const fixedUsername = "huanrose@gmail.com";
+        const fixedPassword = "123456";
+        
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username === fixedUsername && password === fixedPassword) {
+            console.log("Đăng nhập thành công!");
+        } else {
+            console.log("Đăng nhập thất bại!");
+        }
+    }
+</script>
+</html>
