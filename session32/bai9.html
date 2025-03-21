@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .progress-container {
+            width: 50%;
+            background-color: #eee;
+            margin: auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 30px;
+            width: 0%;
+            background-color: green;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Progress Bar</h2>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">0%</div>
+    </div>
+    <div class="buttons">
+        <button onclick="increaseProgress()">Tăng tiến trình</button>
+        <button onclick="decreaseProgress()">Giảm tiến trình</button>
+    </div>
+
+    <script>
+        let progress = 0;
+        function updateProgressBar() {
+            const progressBar = document.getElementById("progress-bar");
+            progressBar.style.width = progress + "%";
+            progressBar.textContent = progress + "%";
+        }
+        function increaseProgress() {
+            if (progress < 100) {
+                progress += 10;
+                updateProgressBar();
+            }
+        }
+        function decreaseProgress() {
+            if (progress > 0) {
+                progress -= 10;
+                updateProgressBar();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            display: none;
+        }
+        .text1{
+            display: block;
+            color: greenyellow;
+        }
+        .text2{
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="EmailInput"> <br>
+    <button onclick="checked()">Check</button> 
+    <p class="text" class="text1" id="text3">email hợp lệ!</p>
+    <p class="text" class="text2" id="text4">email không hợp lệ!</p>
+</body> 
+<script>
+    function checked(){
+        let email = document.getElementById("EmailInput").value.trim();
+        document.getElementById("text3").setAttribute("class","text")
+        document.getElementById("text4").setAttribute("class","text")
+        if (email.includes("@") && (email.endsWith(".com") || email.endsWith(".vn"))) {
+            document.getElementById("text3").setAttribute("class","text1")
+        } else {
+            document.getElementById("text4").setAttribute("class","text2")
+        }
+    }
+</script>
+</html>
