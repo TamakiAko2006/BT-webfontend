@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Đơn giản</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.products, .cart {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.products {
+    width: 60%;
+}
+
+.cart {
+    width: 30%;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product {
+    width: 45%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background: darkgreen;
+}
+
+.cart {
+    text-align: center;
+}
+
+.cart-content {
+    margin: 15px 0;
+    font-size: 16px;
+    color: gray;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.checkout {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout:hover {
+    background: darkblue;
+}
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Cửa hàng Đơn giản</h1>
+
+    <div class="container">
+        <div class="products">
+            <h2>Sản phẩm</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="./image/samsung-galaxy-a54-thumb-den-600x600.jpg">
+                    <h3>Điện thoại Samsung Galaxy A54</h3>
+                    <p class="price">7.490.000đ</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product">
+                    <img src="./image/dell-inspiron-15-3520-i5-25p231-1-2-750x500.jpg" alt="Laptop Dell Inspiron 15">
+                    <h3>Laptop Dell Inspiron 15</h3>
+                    <p class="price">15.990.000đ</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product">
+                    <img src="./image/tai-nghe-bluetooth-airpods-pro-2nd-gen-usb-c-charge-apple-1-750x500.jpg" alt="Tai nghe AirPods Pro">
+                    <h3>Tai nghe AirPods Pro</h3>
+                    <p class="price">4.990.000đ</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="product">
+                    <img src="./image/unnamed.jpg" alt="Apple Watch">
+                    <h3>Đồng hồ thông minh Apple Watch</h3>
+                    <p class="price">8.990.000đ</p>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Giỏ hàng</h2>
+            <div class="cart-content">Giỏ hàng trống</div>
+            <p class="total">Tổng: 0đ</p>
+            <button class="checkout">Thanh toán</button>
+        </div>
+    </div>
+
+</body>
+</html>
