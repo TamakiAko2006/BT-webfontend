@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .table1{
+            text-align: center;
+            width: 100%;
+        }
+        .table2{
+            background-color: rgb(227, 229, 230);
+        }
+        .header{
+            border: 1px solid black;
+        }
+        .text6{
+            border-left: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Task Mangement</h1>
+        <div class="header">
+            <label for="">tên nhân viên</label>
+            <input id="contents" type="text">
+            <label class="text6" for=""> &nbsp; chức vụ</label>
+            <input type="text" id="users"> 
+        </div>
+        <button class="button1" type="submit" onclick="addCourse()">Thêm nhân viên</button>
+        <div>
+            <table class="table1" border="1">
+                <thead>
+                    <tr class="table2">
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Chức vụ</th>
+                    </tr>
+                </thead>
+        
+                <tbody id="coursesTable">
+                </tbody>
+        
+        
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const courses = JSON.parse(localStorage.getItem("courses")) || [
+  {
+    id: 1,
+    name: 'Nguyễn Văn A',
+    job: 'Developer'
+  },
+  {
+    id: 2,
+    name: 'Trần Thị B',
+    job: 'Designer'
+  },
+  {
+    id: 3,
+    name: 'Phạm Văn C',
+    job: 'Project Manager'
+  }
+];
+
+function renderCourses(){
+    const tableBody = document.getElementById("coursesTable");
+    tableBody.innerHTML = "";
+    courses.forEach((course, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${course.name}</td>
+                <td>${course.job}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+}
+
+function addCourse(){
+    let name = document.getElementById("contents").value
+    let job = document.getElementById("users").value
+
+    courses.push({name,job});
+    localStorage.setItem("courses",JSON.stringify(courses));
+    renderCourses();
+}
+
+renderCourses();
+</script>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .table1{
+            text-align: center;
+            width: 100%;
+        }
+        .table2{
+            background-color: rgb(227, 229, 230);
+        }
+        .button1{
+            background-color: blue;
+            color: white;
+            border: 1px solid blue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Task Mangement</h1>
+        <div>
+            <input id="contents" type="text" placeholder="content">
+            <input id="dates" type="date">
+            <select id="status">
+                <option selected disabled>Choose status</option>
+                <option value="Pending">Pending</option>
+                <option value="Success">Success</option>
+            </select>
+            <input type="text" id="users" placeholder="username">
+            <button class="button1" type="submit" onclick="addCourse()">Submit</button>
+        </div>
+        <div>
+            <table class="table1" border="0">
+                <thead>
+                    <tr class="table2">
+                        <th>#</th>
+                        <th>CONTENT</th>
+                        <th>DUE DATE</th>
+                        <th>STATUS</th>
+                        <th>ASSIGNED TO</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="coursesTable">
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    const courses = JSON.parse(localStorage.getItem("courses")) || [
+  {
+    id: 1,
+    content: 'Learn Javascript Session 01',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Anh Bách',
+  },
+  {
+    id: 2,
+    content: 'Learn Javascript Session 2',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Lâm th`',
+  },
+  {
+    id: 3,
+    content: 'Learn CSS Session 1',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Hiếu Ci Ớt Ớt',
+  }
+];
+
+    let editIndex = null; // Lưu vị trí công việc đang sửa
+
+    function renderCourses() {
+        const tableBody = document.getElementById("coursesTable");
+        tableBody.innerHTML = ""; 
+
+        courses.forEach((course, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${course.content}</td>
+                <td>${course.dueDate}</td>
+                <td>${course.status}</td>
+                <td>${course.assignedTo}</td>
+                <td>
+                    <button onclick="editCourse">Sửa</button>
+                    <button onclick="deleteCourse">Xóa</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    function addOrUpdateCourse() {
+        let content = document.getElementById("contents").value;
+        let dueDate = document.getElementById("dates").value;
+        let status = document.getElementById("status").value;
+        let assignedTo = document.getElementById("users").value;
+
+        if (!content || !dueDate || !status || !assignedTo) {
+            alert("Vui lòng nhập đầy đủ thông tin!");
+            return;
+        }
+
+        if (editIndex === null) {
+
+            let newCourse = {
+                id: courses.length + 1,
+                content,
+                dueDate,
+                status,
+                assignedTo
+            };
+            courses.push(newCourse);
+        } else {
+            courses[editIndex].content = content;
+            courses[editIndex].dueDate = dueDate;
+            courses[editIndex].status = status;
+            courses[editIndex].assignedTo = assignedTo;
+            editIndex = null; 
+            document.getElementById("submitBtn").textContent = "Thêm công việc"; 
+        }
+
+        localStorage.setItem("courses", JSON.stringify(courses));
+
+        renderCourses();
+    }
+
+    function editCourse(index) {
+        let course = courses[index];
+        document.getElementById("contents").value = course.content;
+        document.getElementById("dates").value = course.dueDate;
+        document.getElementById("status").value = course.status;
+        document.getElementById("users").value = course.assignedTo;
+
+        editIndex = index;
+        document.getElementById("submitBtn").textContent = "Cập nhật công việc"; 
+    }
+
+    function deleteCourse(index) {
+        courses.splice(index, 1);
+        localStorage.setItem("courses", JSON.stringify(courses));
+        renderCourses();
+    }
+
+    renderCourses();
+</script>
+</html>

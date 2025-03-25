@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header{
+        background-color: rgba(244,244,244,255);
+        text-align: center;
+        height: 900px;
+    }
+    .body1{
+        background-color: white;
+        border-radius: 6px;
+        border: 1px solid white;
+        width: 30%;
+        margin-left: 35%;
+
+    }
+    .button1{
+        background-color: rgba(40,167,69,255);
+        border-radius: 3px;
+        border: 1px solid rgba(40,167,69,255);
+        color: white;
+        width: 60px;
+        height: 30px;
+    }
+    .text5{
+        text-align: left;
+    }
+    .close{
+        background-color: red;
+        color: white;
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+<body>
+    <div class="header">
+        <h1>To-Do List</h1>
+        <div class="body1">
+            <input type="text" name="" id="subjectsInput" placeholder="Nhập nhiệm vụ...">
+            <button class="button1" onclick="addSubjects()">Thêm</button>
+            <ul id="myUL" class="text5"> 
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let todoList = JSON.parse(localStorage.getItem("todoList")) || ["học js", "Học local storage"];
+    function show() {
+    let str = "";
+    for (let i = 0; i < todoList.length; i++) {
+        str += `
+            <li>
+                ${todoList[i]} <span onclick="removeTask(event, ${i})" class="close">&nbsp;×&nbsp;</span>
+            </li> 
+        `;
+        document.getElementById("myUL").innerHTML = str;
+        localStorage.setItem("todoList", JSON.stringify(todoList));
+    }
+    document.getElementById("myUL").innerHTML = str;
+    }
+    function removeTask(event, index) {
+            event.stopPropagation();
+            todoList.splice(index, 1);
+            show();
+        }
+
+        function addSubjects(){
+        let input = document.getElementById("subjectsInput").value.trim();
+        if (input) {
+                todoList.push(input);
+                document.getElementById("subjectsInput").value = ""; // Xóa ô input sau khi nhập
+                show();
+            } else {
+                alert("việc không được để trống!");
+            }
+        }
+    
+    
+show();
+</script>
+</html>
