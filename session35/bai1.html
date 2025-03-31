@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<style>
+    .header {
+        background-color: rgba(244,244,244,255);
+        text-align: center;
+        height: 900px;
+    }
+    .body1 {
+        background-color: white;
+        border-radius: 6px;
+        border: 1px solid white;
+        width: 30%;
+        margin-left: 35%;
+        padding: 10px;
+    }
+    .button1 {
+        background-color: rgba(40,167,69,255);
+        border-radius: 3px;
+        border: 1px solid rgba(40,167,69,255);
+        color: white;
+        width: 60px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .close {
+        border: 1px solid black;
+        width: 30px;
+        cursor: pointer;
+        border-radius: 3px;
+        text-align: center;
+        background-color: red;
+        color: white;
+        margin-left: 10px;
+    }
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+        align-items: center;
+    }
+    .fixed {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>To-Do List K24_PTIT</h1>
+        <div class="body1">
+            <input type="text" id="subjectsInput" placeholder="Nhập nhiệm vụ...">
+            <button class="button1" onclick="addSubjects()">Thêm</button>
+            <ul id="myUL"></ul>
+        </div>
+    </div>
+</body>
+<script>
+    let todoList = JSON.parse(localStorage.getItem("todoList")) || ["học dom js", "làm bài tập dom js"];
+
+    function show() {
+        let str = "";
+        for (let i = 0; i < todoList.length; i++) {
+            str += `
+                <li>
+                    ${todoList[i]} 
+                    <span>
+                        <button class="fixed" onclick="fixedSubjects(${i})">Sửa</button>
+                        <button class="close" onclick="removeTask(${i})">Xóa</button>
+                    </span>
+                </li> 
+            `;
+        }
+        document.getElementById("myUL").innerHTML = str;
+        localStorage.setItem("todoList", JSON.stringify(todoList)); // Lưu vào localStorage
+    }
+
+    function addSubjects() {
+        let input = document.getElementById("subjectsInput").value.trim();
+        if (input) {
+            todoList.push(input);
+            document.getElementById("subjectsInput").value = "";
+            show();
+        } else {
+            alert("Nhiệm vụ không được để trống!");
+        }
+    }
+
+    function removeTask(index) {
+        todoList.splice(index, 1);
+        show();
+    }
+
+    function fixedSubjects(index) {
+        let afterFixed = prompt("Nhập nội dung muốn sửa:", todoList[index]);
+        if (afterFixed !== null && afterFixed.trim() !== "") {
+            todoList[index] = afterFixed.trim();
+            show();
+        }
+    }
+
+    show();
+</script>
+</html>

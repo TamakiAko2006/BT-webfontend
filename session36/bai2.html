@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(244, 246, 248, 255);
+            text-align: center;
+        }
+        .header {
+            display: grid;
+            background-color: white;
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 5%;
+            border-radius: 6px;
+            height: 200px;
+            grid-template-columns: repeat(3, 2fr);
+            align-items: center;
+            padding: 10px;
+        }
+        button {
+            background-color: rgba(40, 167, 69, 255);
+            border: 1px solid rgba(40, 167, 69, 255);
+            border-radius: 3px;
+            color: white;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bạn thích món nào nhất? 😋</h1>
+
+    <div class="header">
+        <img src="./image/7b29e701d9138e447299297f4604a834.jpg" width="190px">
+        <div>
+            <h3>Bún bò Huế</h3>
+            <div><span>❤️</span> <span id="count1">0</span> <span>Lượt thích</span></div> <br>
+            <button onclick="Likefood('count1')">Thích +1</button>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="./image/92a00e3a32d28e081cf72c2fad8afc76.jpg" width="190px">
+        <div>
+            <h3>Phở bò Hà Nội</h3>
+            <div><span>❤️</span> <span id="count2">0</span> <span>Lượt thích</span></div> <br>
+            <button onclick="Likefood('count2')">Thích +1</button>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="./image/f26d94fa2154fa33f83e14264a28103b.jpg" width="170px">
+        <div>
+            <h3>Cơm tấm Sài Gòn</h3>
+            <div><span>❤️</span> <span id="count3">0</span> <span>Lượt thích</span></div> <br>
+            <button onclick="Likefood('count3')">Thích +1</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("count1").textContent = localStorage.getItem("count1") || 0;
+            document.getElementById("count2").textContent = localStorage.getItem("count2") || 0;
+            document.getElementById("count3").textContent = localStorage.getItem("count3") || 0;
+        });
+
+        function Likefood(foodId) {
+            let count = parseInt(localStorage.getItem(foodId)) || 0;
+            count++;
+            document.getElementById(foodId).textContent = count;
+            localStorage.setItem(foodId, count);
+        }
+    </script>
+</body>
+</html>

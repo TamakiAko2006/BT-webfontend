@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên Rikkei</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background: #f4f4f4;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .pagination button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .active {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Danh sách nhân viên Rikkei</h2>
+    <input type="text" id="nameInput" placeholder="Tên nhân viên">
+    <input type="text" id="roleInput" placeholder="Chức vụ">
+    <button onclick="addEmployee()">Thêm nhân viên</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Chức vụ</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable"></tbody>
+    </table>
+
+    <div class="pagination">
+        <button onclick="prevPage()">Previous</button>
+        <div id="paginationNumbers"></div>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <script>
+        let employees = [
+            { name: "Nguyễn Văn A", role: "Developer" },
+            { name: "Trần Thị B", role: "Designer" },
+            { name: "Phạm Văn C", role: "Project Manager" },
+            { name: "Lê Thị D", role: "QA Engineer" },
+            { name: "Vũ Văn E", role: "DevOps" },
+            { name: "Hoàng Thị F", role: "HR Manager" },
+            { name: "Ngô Văn G", role: "Backend Developer" },
+            { name: "Lý Thị H", role: "Marketing" },
+            { name: "Phan Văn I", role: "Tester" }
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 3;
+
+        function renderEmployees() {
+            let tableBody = document.getElementById("employeeTable");
+            tableBody.innerHTML = "";
+
+            let start = (currentPage - 1) * itemsPerPage;
+            let end = start + itemsPerPage;
+            let paginatedEmployees = employees.slice(start, end);
+
+            paginatedEmployees.forEach((employee, index) => {
+                let row = `<tr>
+                    <td>${start + index + 1}</td>
+                    <td>${employee.name}</td>
+                    <td>${employee.role}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+
+            renderPagination();
+        }
+
+        function renderPagination() {
+            let paginationContainer = document.getElementById("paginationNumbers");
+            paginationContainer.innerHTML = "";
+            let totalPages = Math.ceil(employees.length / itemsPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                let button = document.createElement("button");
+                button.innerText = i;
+                button.classList.add(currentPage === i ? "active" : "");
+                button.onclick = function () {
+                    currentPage = i;
+                    renderEmployees();
+                };
+                paginationContainer.appendChild(button);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderEmployees();
+            }
+        }
+
+        function nextPage() {
+            let totalPages = Math.ceil(employees.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderEmployees();
+            }
+        }
+
+        function addEmployee() {
+            let name = document.getElementById("nameInput").value.trim();
+            let role = document.getElementById("roleInput").value.trim();
+
+            if (name === "" || role === "") {
+                alert("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            employees.push({ name, role });
+            document.getElementById("nameInput").value = "";
+            document.getElementById("roleInput").value = "";
+            currentPage = Math.ceil(employees.length / itemsPerPage);
+            renderEmployees();
+        }
+
+        renderEmployees();
+    </script>
+
+</body>
+</html>

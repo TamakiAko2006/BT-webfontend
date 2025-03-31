@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgba(244,246,248,255);
+        text-align: center;
+    }
+    .header{
+        background-color: white;
+        width: 30%;
+        margin-left: 35%;
+        margin-top: 15%;
+        border-radius: 6px;
+        height: 200px;
+    }
+    .text1{
+        padding-top: 30px;
+    }
+    button{
+        background-color: rgba(0,123,255,255);
+        border: 1px solid rgba(0,123,255,255);
+        border-radius: 3px;
+        color: white;
+    }
+</style>
+<body>
+    <div class="header">
+        <h1 class="text1">Nhập tên của bạn</h1>
+        <input id="name" type="text">
+        <button onclick="renderName()">Lưu</button>
+        <p id="text">🐸chào bạn</p>
+    </div>
+</body>
+<script>
+    function renderName(){
+        document.getElementById("name").value;
+        localStorage.setItem("name",JSON.stringify(name));
+        document.getElementById("text").textContent = "🐸chào bạn" + name;
+    }
+
+    function showtext(){
+        let name = localStorage.getItem("name");
+        document.getElementById("text").textContent = "🐸chào bạn" + name;
+    }
+
+    function changename(){
+        let name = document.getItem("name");
+        document.getElementById("name").value = name;
+    }
+    showtext();
+</script>
+</html>
